@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abhiram | DevOps Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #94a3b8;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #3b82f6;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #1e293b;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>M Siva Abhiram Reddy</h1>
+    <p>DevOps Engineer | Django Developer | Cloud Enthusiast</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a passionate DevOps and backend developer focused on building scalable,
+        automated, and production-ready applications using Docker, CI/CD, and AWS.
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>Django</span>
+        <span>Docker</span>
+        <span>Git</span>
+        <span>GitHub Actions</span>
+        <span>AWS</span>
+        <span>Linux</span>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    {% for project in projects %}
+        <div class="project-card">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.github_link }}" target="_blank">View on GitHub</a>
+        </div>
+    {% endfor %}
+
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: msabhiramreddy11@gamil.com</p>
+    <p>GitHub: <a href="https://github.com/sivaabhiramreddy">sivaabhiramreddy</a></p>
+</section>
+
+<footer>
+    © 2026 Abhiram | Built with Django
+</footer>
+
+</body>
+</html>
